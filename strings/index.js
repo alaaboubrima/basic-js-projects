@@ -12,6 +12,7 @@ name.addEventListener("keyup", () => {
 
     answer1.textContent = getNumberOfChars(value);
     answer2.textContent = getFirstChar(value);
+    answer3.textContent = getLastChar(value);
     
      
 });
