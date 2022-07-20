@@ -10,6 +10,7 @@ const name = document.querySelector("#your-name");
 name.addEventListener("keyup", () => {
     const value = name.value;
 
+    answer1.textContent = getNumberOfChars(value);
     
      
 });
