@@ -14,6 +14,6 @@ name.addEventListener("keyup", () => {
     answer2.textContent = getFirstChar(value);
     answer3.textContent = getLastChar(value);
     answer4.textContent = getLower(value);
-    
+    answer5.textContent = getUpper(value);
      
 });
