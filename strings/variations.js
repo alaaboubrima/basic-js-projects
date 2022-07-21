@@ -18,3 +18,7 @@ function getUpper(name) {
     // name all in upper case (example: "abc" becomes "ABC")
     return name.toUpperCase()
 }
+function getCapitalized(name) {
+    // capitalized version of name (example: "alEX" becomes "Alex")
+    return name[0].toUpperCase()+name.substring(1).toLowerCase()
+}
