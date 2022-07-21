@@ -10,3 +10,11 @@ function getLastChar(name) {
     // last character of: name
     return name[name.length-1]
 }
+function getLower(name) {
+    // name all in lower case (example: "ABC" becomes "abc")
+    return name.toLowerCase()
+}
+function getUpper(name) {
+    // name all in upper case (example: "abc" becomes "ABC")
+    return name.toUpperCase()
+}
