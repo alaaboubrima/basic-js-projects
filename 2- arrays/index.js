@@ -12,3 +12,12 @@ const renderStats2Table = grades => {
     </tr>`;
 }
 
+const renderStatsTable = grades => {
+    const tbody = document.querySelector("#stats-table tbody");
+    tbody.innerHTML = `<tr>
+        <td>${getNumberOfGrades(grades)}</td>
+        <td>${getSumGrades(grades)}</td>
+        <td>${getAverageValue(grades)}</td>
+    </tr>`;
+}
+
