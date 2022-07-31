@@ -27,3 +27,12 @@ const render = grades => {
     renderStats2Table(grades);
 }
 
+gradesForm.addEventListener("submit", event => {
+    event.preventDefault();
+    const newGrade = Number.parseInt(yourGrade.value, 10);
+    grades.push(newGrade);
+    yourGrade.value = "";
+    render(grades);
+});
+
+render(grades);
