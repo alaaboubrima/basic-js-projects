@@ -21,3 +21,9 @@ const renderStatsTable = grades => {
     </tr>`;
 }
 
+const render = grades => {
+    console.log("Grades: " + grades.join(', '));
+    renderStatsTable(grades);
+    renderStats2Table(grades);
+}
+
