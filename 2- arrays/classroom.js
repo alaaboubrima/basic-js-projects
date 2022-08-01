@@ -16,3 +16,8 @@ function getPassingGrades(grades) {
         return grade >= 10
     })
 }
+function getFailingGrades(grades) {
+    return grades.filter(function(grade) {
+        return grade < 10
+    })
+}
