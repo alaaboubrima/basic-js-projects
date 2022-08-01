@@ -11,6 +11,7 @@ function getSumGrades(grades) {
 return sum;
 }
 function getAverageValue(grades) {
+    // return the average value of all grades (sum of all grades divided by the total number of grades)
     return getSumGrades(grades) / getNumberOfGrades(grades);
 }
 function getPassingGrades(grades) {
