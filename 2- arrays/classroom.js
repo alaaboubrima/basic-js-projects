@@ -1,4 +1,5 @@
 function getNumberOfGrades(grades) {
+    // return the number of grades
     return grades.length;
 }
 function getSumGrades(grades) {
