@@ -8,3 +8,6 @@ function getSumGrades(grades) {
     })
 return sum;
 }
+function getAverageValue(grades) {
+    return getSumGrades(grades) / getNumberOfGrades(grades);
+}
