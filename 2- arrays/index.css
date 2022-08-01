@@ -25,9 +25,11 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: var(--neutral-5);
   margin: 0;
 }
+
 
 h1 {
   font-size: 36px;
