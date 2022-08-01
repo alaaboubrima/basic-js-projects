@@ -21,6 +21,7 @@ function getPassingGrades(grades) {
     })
 }
 function getFailingGrades(grades) {
+    // return all failing grades (9 and below)
     return grades.filter(function(grade) {
         return grade < 10
     })
