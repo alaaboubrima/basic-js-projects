@@ -27,6 +27,7 @@ function getFailingGrades(grades) {
     })
 }
 function getRaisedGrades(grades) {
+    // return all the grades raised by 1 (no grade should exceed 20)
     return grades.map(function(grade) {
         if (grade < 20) return grade += 1;
         else return grade; 
