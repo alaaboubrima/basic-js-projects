@@ -15,6 +15,7 @@ function getAverageValue(grades) {
     return getSumGrades(grades) / getNumberOfGrades(grades);
 }
 function getPassingGrades(grades) {
+    // return all passing grades (10 and above)
     return grades.filter(function(grade) {
         return grade >= 10
     })
