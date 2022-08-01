@@ -3,6 +3,7 @@ function getNumberOfGrades(grades) {
     return grades.length;
 }
 function getSumGrades(grades) {
+    // return the sum of all the grades
     let sum = 0;
     grades.forEach(function(grade) {
         sum += grade;
