@@ -1,0 +1,65 @@
+<html>
+<script>
+
+function convertToRoman(num) {
+  let res = "";
+  while (num !== 0) {
+    if(num % 1000 >= 0 && num !== num % 1000) {
+    res += "M";
+    num = num % 1000;;
+    } 
+    if(num % 900 >= 0 && num !== num % 900) {
+    res += "CM";
+    num = num % 900;
+    } 
+    if(num % 500 >= 0 && num !== num % 500) {
+    res += "D";
+    num = num % 500;
+    } 
+    if(num % 400 >= 0 && num !== num % 400) {
+    res += "CD";
+    num = num % 400;
+    } 
+    if(num % 100 >= 0 && num !== num % 100) {
+    res += "C";
+    num = num % 100;
+    } 
+    if(num % 90 >= 0 && num !== num % 90) {
+    res += "XC";
+    num = num % 90;
+    } 
+    if(num % 50 >= 0 && num !== num % 50) {
+    res += "L";
+    num = num % 50;
+    } 
+    if(num % 40 >= 0 && num !== num % 40) {
+    res += "XL";
+    num = num % 40;
+    } 
+    if(num % 10 >= 0 && num !== num % 10) {
+    res += "X";
+    num = num % 10;
+    } 
+    if(num % 9 >= 0 && num !== num % 9) {
+    res += "IX";
+    num = num % 9;
+    } 
+    if(num % 5 >= 0 && num !== num % 5) {
+    res += "V";
+    num = num % 5;
+    } 
+    if(num % 4 >= 0 && num !== num % 4) {
+    res += "IV";
+    num = num % 4;
+    } 
+    if(num % 1 >= 0 && num !== num % 1) {
+    res += "I";
+    num = num % 1;
+    } 
+  }
+  return res;
+}
+
+
+</script>
+</html>
