@@ -7,7 +7,7 @@ function rot13(str) {
       return String.fromCharCode(item.charCodeAt() + 13) //a simple methode to increment letters (ASCII)
     } else if (/[N-Z]/.test(item))  {
       return String.fromCharCode(item.charCodeAt() - 13) //we decrease when we get to the letter N since the ASCII(Z) = 90 and ASCII(a) = 97
-      } else return item }).join("") 
+      } else return item }).join("") //join to transforme back our array to a string
 }
 
 console.log(rot13("SERR CVMMN!")); //return "FREE PIZZA!"
