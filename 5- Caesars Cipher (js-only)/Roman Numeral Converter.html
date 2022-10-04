@@ -6,7 +6,7 @@ function rot13(str) {
     if(/[A-M]/.test(item)){ //returns true when the letter is [A to M]
       return String.fromCharCode(item.charCodeAt() + 13) //a simple methode to increment letters (ASCII)
     } else if (/[N-Z]/.test(item))  {
-      return String.fromCharCode(item.charCodeAt() - 13) 
+      return String.fromCharCode(item.charCodeAt() - 13) //we decrease when we get to the letter N since the ASCII(Z) = 90 and ASCII(a) = 97
       } else return item }).join("") 
 }
 
