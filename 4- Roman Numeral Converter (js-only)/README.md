@@ -1,4 +1,4 @@
-# basic-js-projects
+# Roman Numeral Converter
 
 The purpose is to convert the given number into a roman numeral.
 
@@ -16,3 +16,5 @@ IX					9
 V					5
 IV					4
 I					1
+
+As an example convertToRoman(29) should return XXIX
