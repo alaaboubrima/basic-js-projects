@@ -9,3 +9,4 @@ The object is to write a function which takes a ROT13 encoded string as input an
 
 All letters will be uppercase. We shall not transform any non-alphabetic character (i.e. spaces, punctuation), but pass them on.
 
+As an example rot13("SERR CVMMN!") should decode to the string FREE PIZZA!
