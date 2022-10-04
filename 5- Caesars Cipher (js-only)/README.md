@@ -7,4 +7,5 @@ A common modern use is the ROT13 cipher, where the values of the letters are shi
 
 The object is to write a function which takes a ROT13 encoded string as input and returns a decoded string.
 
+All letters will be uppercase. We shall not transform any non-alphabetic character (i.e. spaces, punctuation), but pass them on.
 
