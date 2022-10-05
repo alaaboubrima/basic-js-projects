@@ -15,3 +15,7 @@ The objective is to validate or reject the US phone number based on any combinat
 The area code is required. If the country code is provided, we must confirm that the country code is 1. 
 
 Return true if the string is a valid US phone number; otherwise return false.
+
+telephoneCheck("1 456 789 4444") should return true.
+
+telephoneCheck("2 456 789 4444") should return false.
