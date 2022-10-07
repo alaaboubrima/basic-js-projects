@@ -1,7 +1,38 @@
 <html>
 <script>
 
+function checkCashRegister(price, cash, cid) {
+  let cashLeft = cash - price;
+  let array = [
+  ["ONE HUNDRED", 0],
+  ["TWENTY", 0],
+  ["TEN", 0],
+  ["FIVE", 0],
+  ["ONE", 0],
+  ["QUARTER", 0],
+  ["DIME", 0],
+  ["NICKEL", 0],
+  ["PENNY", 0]
+];
 
+    while(cashLeft > 0) {
+      console.log(cashLeft.toFixed(10))
+      if (cashLeft >= 100 && cid[8][1] > 100) { cashLeft -= 100; array[0][1] += 100; cid [8][1] -= 100; }
+      else if (cashLeft >= 20 && cid[7][1] >= 20) { cashLeft -= 20; array[1][1] += 20; cid [7][1] -= 20}
+      else if (cashLeft >= 10 && cid[6][1] >= 10) { cashLeft -= 10; array[2][1] += 10; cid [6][1] -= 10}
+      else if (cashLeft >= 5 && cid[5][1] >= 5) { cashLeft -= 5; array[3][1] += 5; cid [5][1] -= 5}
+      else if (cashLeft >= 1 && cid[4][1] >= 1) { cashLeft -= 1; array[4][1] += 1; cid [4][1] -= 1}
+      else if (cashLeft >= 0.25 && cid[3][1] >= 0.25) { cashLeft -= 0.25; array[5][1] += 0.25; cid [8][1] -= 0.25}
+      else if (cashLeft >= 0.1 && cid[2][1] >= 0.1) { cashLeft -= 0.1; array[6][1] += 0.1; cid [8][1] -= 0.1}
+      else if (cashLeft >= 0.05 && cid[1][1] >= 0.05) { cashLeft -= 0.05; array[7][1] += 0.05; cid [8][1] -= 0.05}
+      else if (cashLeft.toFixed(10) >= 0.01 && cid[0][1].toFixed(10) >= 0.01) { cashLeft -= 0.01; array[8][1] += 0.01; cid[0][1] -= 0.01}
+      else return {status: "INSUFFICIENT_FUNDS", change: []}
+    }
+  if (cid.every(item => item[1] < 0.01)) {return {status: "CLOSED", change: [...array].reverse()}} else
+  return {status: "OPEN", change: [...array].filter(item => item[1] > 0)}
+}
+
+console.log(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
 
 </script>
 </html>
