@@ -28,6 +28,7 @@ function checkCashRegister(price, cash, cid) {
       else if (cashLeft.toFixed(10) >= 0.01 && cid[0][1].toFixed(10) >= 0.01) { cashLeft -= 0.01; array[8][1] += 0.01; cid[0][1] -= 0.01}
       else return {status: "INSUFFICIENT_FUNDS", change: []}
     }
+    array[8][1] = Math.round((parseFloat(array[8][1]))*100)/100;
   if (cid.every(item => item[1] < 0.01)) {return {status: "CLOSED", change: [...array].reverse()}} else
   return {status: "OPEN", change: [...array].filter(item => item[1] > 0)}
 }
